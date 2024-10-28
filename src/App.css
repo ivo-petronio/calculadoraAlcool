@@ -7,14 +7,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100%;
 }
 
 .logo {
   max-width: 247px;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background-color: var(--iro);
   position: relative;
@@ -48,7 +47,7 @@ form label {
 
 form .input {
   margin: 15px 0;
-  height: 45px;
+  height: 40px;
   padding-left: 15px;
   font-size: 25px;
   border: none;
@@ -62,10 +61,10 @@ form input:focus {
 }
 
 form .button {
-  height: 45px;
+  height: 40px;
   border: 0;
   border-radius: 5px;
-  margin-top: 27px;
+  margin: 15px 0 30px 0;
   font-size: 25px;
   background-color: var(--iro);
   color: #000;
@@ -75,4 +74,53 @@ form .button {
 form .button:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 3px #ffffffaa;
+}
+
+.result {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #00B73F;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: space-between;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+  //display: none;
+}
+
+.result .resultTitle {
+  margin-bottom: 10px;
+  font-size: 3vmin;
+  font-weight: 700;
+}
+
+.result .resultOption {
+  margin-bottom: 5px;
+  font-size: 2.3vmin;
+  font-weight: 500;
+}
+
+.result::before {
+  //content: '';
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  background-color: orangered;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: brilho;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes brilho {
+
 }
